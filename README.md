@@ -31,8 +31,8 @@ Hemos enfocado nuestro desarrollo en integrar tecnologías clave del ecosistema 
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://www.youtube.com/watch?v=3GymExBkKjE](https://www.youtube.com/watch?v=3GymExBkKjE)
-    cd pwa-final
+    git clone [https://github.com/OhrDev-Mx/agora-pwa-hackathon.git](https://github.com/OhrDev-Mx/agora-pwa-hackathon.git)
+    cd agora-pwa-hackathon
     ```
 2.  **Instalar dependencias:**
     ```bash
