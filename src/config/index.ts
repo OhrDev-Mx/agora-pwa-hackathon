@@ -1,8 +1,8 @@
 // pwa-final/src/config/index.ts
 
 // Reemplaza esta dirección con la ÚLTIMA que te dio Anvil
-export const agoraEngineAddress = '0x300BF1DA8c6dE63391B69C729D2da1871437073F'; 
-
+export const agoraEngineAddress = '0x300BF1DA8c6dE63391B69C729D2da1871437073F' as const; 
+export const mockUSDCAddress = '0x70aeF628aF67616fcdD3f82a0023fe23E9FC456B' as const;
 export const agoraEngineABI = [
   {
     "type": "constructor",
@@ -116,4 +116,3 @@ export const agoraEngineABI = [
   { "type": "error", "name": "OwnableInvalidOwner", "inputs": [ { "name": "owner", "type": "address", "internalType": "address" } ] },
   { "type": "error", "name": "OwnableUnauthorizedAccount", "inputs": [ { "name": "account", "type": "address", "internalType": "address" } ] }
 ] as const;
-export const mockUSDCAddress = '0x70aeF628aF67616fcdD3f82a0023fe23E9FC456B';

@@ -5,10 +5,12 @@ import { injected } from 'wagmi/connectors';
 import { RegisterCreator } from './components/RegisterCreator';
 import { TipCreator } from './components/TipCreator';
 import { Link } from 'react-router-dom';
-import { AppShell, Burger, Group, Button, Title, Text, Box, Container } from '@mantine/core';
+// CORRECCIÓN AQUÍ: Eliminamos 'Box' que no se usa
+import { AppShell, Burger, Group, Button, Title, Text, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 export default function App() {
+  // ... (el resto del código es perfecto y no cambia)
   const [isClient, setIsClient] = useState(false);
   const { address, isConnected } = useAccount();
   const { connect } = useConnect();
