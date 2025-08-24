@@ -53,7 +53,7 @@ export function TipCreator() {
             address: agoraEngineAddress,
             abi: agoraEngineABI,
             functionName: 'tip',
-            args: [handle, message, tipInWei],
+            args: [handle, message],
             value: tipInWei,
         });
     } catch (e) {
