@@ -13,7 +13,13 @@ export function TipCreator() {
   const [amount, setAmount] = useState<string | number>('');
   const [message, setMessage] = useState('');
   
-  const { data: hash, writeContract, isPending: isSubmitting, reset } = useWriteContract();
+  const { data: hash, writeContract, isPending: isSubmitting, reset } = useWriteContract({
+    mutation: {
+      onError: (error) => {
+        notifications.show({ color: 'red', title: 'Error en la Transacción', message: error.message });
+      }
+    }
+  });
 
   const { isLoading: isConfirming, isSuccess: isConfirmed } = useWaitForTransactionReceipt({ 
     hash, 
@@ -62,7 +68,7 @@ export function TipCreator() {
     <Paper withBorder shadow="md" p="xl" radius="md">
       <Title order={2}>2. Enviar Apoyo</Title>
       <Text c="dimmed" size="sm" mb="lg">Apoya a un creador con una propina directa.</Text>
-      <form onSubmit={submit} className="space-y-4">
+      <form onSubmit={submit}>
         <TextInput
           label="Handle del Creador"
           placeholder="MiProyectoSocial"
@@ -89,7 +95,7 @@ export function TipCreator() {
           onChange={(event) => setMessage(event.currentTarget.value)}
         />
         <Button type="submit" mt="md" loading={isPending} fullWidth color="green">
-          {isSubmitting ? 'Enviando...' : isConfirming ? 'Confirmando...' : 'Enviar Propina'}
+          {isSubmitting ? 'Enviando...' : isConfirming ? 'Confirmando en Blockchain...' : 'Enviar Propina'}
         </Button>
       </form>
     </Paper>
