@@ -1,0 +1,28 @@
+# Dependencias
+node_modules
+
+# Archivos de caché y logs de Foundry
+cache/
+out/
+broadcast/
+foundry.toml.lock
+remappings.txt
+logs/
+
+# Archivos de caché de Vite
+.vite/
+
+# Archivos de compilación de Next.js/Vite (aunque Vite no los usa tanto)
+.next/
+dist/
+
+# Archivos de entorno (¡MUY IMPORTANTE!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,9 @@
+/* pwa-final/src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+}
